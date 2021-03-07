@@ -5,7 +5,8 @@ import multer from 'multer';
 const tmpFolder = patch.resolve(__dirname, '..', '..', 'tmp');
 
 export default {
-  directory: tmpFolder,
+  tmpFolder,
+  uploadsFolder: patch.resolve(tmpFolder, 'uploads'),
 
   storage: multer.diskStorage({
     destination: tmpFolder,
